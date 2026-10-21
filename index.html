@@ -27,24 +27,24 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen text-slate-800 flex flex-col antialiased selection:bg-navy-900 selection:text-white">
+<body class="bg-slate-100 min-h-screen text-slate-800 flex flex-col antialiased selection:bg-navy-900 selection:text-white pb-12">
 
     <!-- Top Accent Bar -->
     <div class="h-1.5 bg-amber-400 w-full"></div>
 
     <!-- Official Brand Header Area -->
     <header class="bg-navy-900 text-white border-b border-slate-200 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-5 sm:px-6">
+        <div class="max-w-5xl mx-auto px-4 py-5 sm:px-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 
                 <!-- Dual Branding Group -->
-                <div class="flex items-center gap-3 sm:gap-5">
+                <div class="flex items-center gap-4 sm:gap-6">
                     <!-- Health for California SVG Logo -->
                     <div class="flex items-center gap-2.5">
-                        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-white/90 flex items-center justify-center bg-navy-900 flex-shrink-0">
-                            <!-- California Map inside Circle -->
-                            <svg viewBox="0 0 100 100" class="w-6 h-6 fill-white">
-                                <path d="M 40 15 L 60 15 L 55 35 L 75 60 L 65 85 L 50 85 L 35 65 L 30 40 Z" />
+                        <div class="w-11 h-11 rounded-full border-2 border-white/90 flex items-center justify-center bg-navy-900 flex-shrink-0 p-1.5">
+                            <!-- California State Map -->
+                            <svg viewBox="0 0 100 100" class="w-full h-full fill-white">
+                                <path d="M 35 15 L 68 15 L 62 38 L 78 62 L 68 85 L 50 85 L 35 68 L 30 42 Z" />
                             </svg>
                         </div>
                         <div class="text-white leading-tight">
@@ -54,16 +54,18 @@
                     </div>
 
                     <!-- Vertical White Divider -->
-                    <div class="h-9 w-px bg-white/40"></div>
+                    <div class="h-9 w-px bg-white/30"></div>
 
-                    <!-- Covered California SVG Logo -->
+                    <!-- Covered California SVG Logo (Fixed Dimensions) -->
                     <div class="flex items-center gap-2.5">
-                        <div class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center flex-shrink-0">
-                            <!-- Covered California Arch Emblem -->
-                            <svg viewBox="0 0 100 100" class="w-8 h-8 fill-none stroke-white stroke-[8]">
-                                <path d="M 20 70 A 35 35 0 0 1 80 70" />
-                                <path d="M 35 70 A 20 20 0 0 1 65 70" />
-                                <circle cx="50" cy="65" r="4" class="fill-white stroke-none" />
+                        <div class="w-11 h-11 flex items-center justify-center flex-shrink-0 p-1">
+                            <svg viewBox="0 0 120 100" class="w-full h-full fill-white">
+                                <path d="M 10,75 A 50,50 0 0,1 110,75 L 94,75 A 34,34 0 0,0 26,75 Z" opacity="0.9"/>
+                                <path d="M 28,75 A 32,32 0 0,1 92,75 L 78,75 A 18,18 0 0,0 42,75 Z" opacity="0.6"/>
+                                <circle cx="38" cy="62" r="4" />
+                                <circle cx="60" cy="54" r="5" />
+                                <circle cx="82" cy="62" r="4" />
+                                <path d="M 32,75 A 6,6 0 0,1 44,75 Z M 53,75 A 7,7 0 0,1 67,75 Z M 76,75 A 6,6 0 0,1 88,75 Z" />
                             </svg>
                         </div>
                         <div class="text-white leading-tight">
@@ -74,8 +76,8 @@
                 </div>
 
                 <!-- Live Webinar Tag -->
-                <div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 text-xs font-medium backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <div class="inline-flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20 text-xs font-medium backdrop-blur-sm">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span>Live Webinar Companion Hub</span>
                 </div>
             </div>
@@ -86,201 +88,133 @@
     </header>
 
     <!-- Main Content Canvas -->
-    <main class="max-w-4xl mx-auto px-4 py-8 sm:px-6 flex-1 w-full">
+    <main class="max-w-5xl mx-auto px-4 py-10 sm:px-6 flex-1 w-full">
         
         <!-- Title & Intro Section -->
-        <div class="text-center mb-8">
-            <h1 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-2">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mb-3">
                 Medicare 101 Official Resource Hub
             </h1>
-            <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
-                Click any resource below to access official enrollment portals, guides, and consultation scheduling during today's presentation.
+            <p class="text-slate-600 max-w-2xl mx-auto text-base">
+                Click any resource block below to access official enrollment portals, guides, and consultation scheduling during today's presentation.
             </p>
         </div>
 
-        <!-- Resource Cards Grid -->
-        <div class="grid gap-4 sm:gap-5">
+        <!-- Blocky 2-Column Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Featured Highlighted Card: 1-on-1 Consultation -->
+            <!-- Featured Block (Full Width Across Grid) -->
             <div onclick="openLink('https://enrollment.healthforcalifornia.com/medicare/appointment')" 
-                 class="group relative bg-white rounded-2xl p-5 border-2 border-amber-400 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden transform hover:-translate-y-0.5">
+                 class="md:col-span-2 group relative bg-white rounded-3xl p-7 border-2 border-amber-400 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden transform hover:-translate-y-1">
                 
-                <div class="relative flex items-start gap-4">
-                    <!-- Icon Box -->
-                    <div class="p-3.5 bg-amber-500 text-white rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
-                        <i data-lucide="calendar-check-2" class="w-6 h-6"></i>
-                    </div>
-
-                    <!-- Card Body -->
-                    <div class="flex-1 min-w-0">
-                        <div class="flex items-center gap-2 mb-1 flex-wrap">
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">
-                                <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-ping"></span>
-                                Featured Free Service
-                            </span>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                    <div class="flex items-start sm:items-center gap-5">
+                        <div class="p-4 bg-amber-500 text-white rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                            <i data-lucide="calendar-check-2" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-navy-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
-                            Schedule a 1-on-1 Appointment with Staff
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                        </h3>
-                        <p class="text-slate-600 text-sm mt-1">
-                            Book a personalized, confidential consultation with an authorized Health for California licensed Medicare specialist at no cost.
-                        </p>
+                        <div>
+                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 mb-2">
+                                <span class="w-2 h-2 rounded-full bg-amber-600 animate-ping"></span>
+                                Featured Free Service
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-navy-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
+                                Schedule a 1-on-1 Appointment with Staff
+                                <i data-lucide="arrow-up-right" class="w-5 h-5 text-amber-600"></i>
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base mt-1 max-w-2xl">
+                                Book a personalized, confidential consultation with an authorized Health for California licensed Medicare specialist at no cost.
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Cohost One-Click Copy Shortcut -->
                     <button onclick="event.stopPropagation(); copyLink('https://enrollment.healthforcalifornia.com/medicare/appointment', '1-on-1 Appointment Link')" 
                             title="Copy link for webinar chat"
-                            class="p-2 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-lg transition-colors flex-shrink-0">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
+                            class="p-3 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors self-end sm:self-center flex-shrink-0 bg-slate-50 border border-slate-200">
+                        <i data-lucide="copy" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Card 2: SSA Sign Up -->
+            <!-- Block 2: SSA Sign Up -->
             <div onclick="openLink('https://www.ssa.gov/medicare')" 
-                 class="group bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 cursor-pointer">
-                <div class="flex items-start gap-4">
-                    <div class="p-3 bg-slate-100 text-navy-900 rounded-xl group-hover:bg-navy-900 group-hover:text-white transition-colors flex-shrink-0">
-                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i data-lucide="building-2" class="w-7 h-7"></i>
+                        </div>
+                        <button onclick="event.stopPropagation(); copyLink('https://www.ssa.gov/medicare', 'SSA Medicare Link')" 
+                                title="Copy link for webinar chat"
+                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <h3 class="text-base font-bold text-navy-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
-                            Sign Up for Medicare on SSA.gov
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                        </h3>
-                        <p class="text-slate-600 text-sm mt-0.5">
-                            Official Social Security Administration portal to apply for Medicare Part A and Part B online.
-                        </p>
-                    </div>
-                    <button onclick="event.stopPropagation(); copyLink('https://www.ssa.gov/medicare', 'SSA Medicare Link')" 
-                            title="Copy link for webinar chat"
-                            class="p-2 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-lg transition-colors flex-shrink-0">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                    </button>
+                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
+                        Sign Up on SSA.gov
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Official Social Security Administration portal to apply for Medicare Part A and Part B online.
+                    </p>
                 </div>
             </div>
 
-            <!-- Card 3: Medicare & You Handbook -->
+            <!-- Block 3: Medicare & You Handbook -->
             <div onclick="openLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf')" 
-                 class="group bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 cursor-pointer">
-                <div class="flex items-start gap-4">
-                    <div class="p-3 bg-slate-100 text-navy-900 rounded-xl group-hover:bg-navy-900 group-hover:text-white transition-colors flex-shrink-0">
-                        <i data-lucide="book-open-check" class="w-6 h-6"></i>
+                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i data-lucide="book-open-check" class="w-7 h-7"></i>
+                        </div>
+                        <button onclick="event.stopPropagation(); copyLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf', 'Medicare Handbook PDF Link')" 
+                                title="Copy link for webinar chat"
+                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <h3 class="text-base font-bold text-navy-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
-                            Medicare & You Official Handbook (PDF)
-                            <i data-lucide="file-text" class="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                        </h3>
-                        <p class="text-slate-600 text-sm mt-0.5">
-                            Download the current year's official U.S. government Medicare reference manual and coverage guide.
-                        </p>
-                    </div>
-                    <button onclick="event.stopPropagation(); copyLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf', 'Medicare Handbook PDF Link')" 
-                            title="Copy link for webinar chat"
-                            class="p-2 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-lg transition-colors flex-shrink-0">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                    </button>
+                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
+                        Medicare & You Handbook
+                        <i data-lucide="file-text" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Download the current year's official U.S. government Medicare reference manual and coverage guide (PDF).
+                    </p>
                 </div>
             </div>
 
-            <!-- Card 4: Health for California Website -->
+            <!-- Block 4: Health for California Website -->
             <div onclick="openLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance')" 
-                 class="group bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 cursor-pointer">
-                <div class="flex items-start gap-4">
-                    <div class="p-3 bg-slate-100 text-navy-900 rounded-xl group-hover:bg-navy-900 group-hover:text-white transition-colors flex-shrink-0">
-                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-7 h-7"></i>
+                        </div>
+                        <button onclick="event.stopPropagation(); copyLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance', 'Health for California Website Link')" 
+                                title="Copy link for webinar chat"
+                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <h3 class="text-base font-bold text-navy-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
-                            Health for California Senior Insurance Center
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                        </h3>
-                        <p class="text-slate-600 text-sm mt-0.5">
-                            Explore state-specific Covered California Medicare Advantage, Supplement (Medigap), and Part D plans.
-                        </p>
-                    </div>
-                    <button onclick="event.stopPropagation(); copyLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance', 'Health for California Website Link')" 
-                            title="Copy link for webinar chat"
-                            class="p-2 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-lg transition-colors flex-shrink-0">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                    </button>
+                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
+                        Senior Insurance Center
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Explore state-specific Covered California Medicare Advantage, Supplement (Medigap), and Part D plans.
+                    </p>
                 </div>
             </div>
 
-            <!-- Card 5: Register for Another Webinar -->
+            <!-- Block 5: Register for Another Webinar -->
             <div onclick="openLink('http://hfca.cc/learn-medicare')" 
-                 class="group bg-white rounded-xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-200 cursor-pointer">
-                <div class="flex items-start gap-4">
-                    <div class="p-3 bg-slate-100 text-navy-900 rounded-xl group-hover:bg-navy-900 group-hover:text-white transition-colors flex-shrink-0">
-                        <i data-lucide="presentation" class="w-6 h-6"></i>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <h3 class="text-base font-bold text-navy-900 group-hover:text-blue-700 transition-colors flex items-center gap-2">
-                            Register for an Upcoming Medicare Webinar
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                        </h3>
-                        <p class="text-slate-600 text-sm mt-0.5">
-                            Invite a friend or sign up for future interactive Medicare educational workshops and live Q&A sessions.
-                        </p>
-                    </div>
-                    <button onclick="event.stopPropagation(); copyLink('http://hfca.cc/learn-medicare', 'Webinar Registration Link')" 
-                            title="Copy link for webinar chat"
-                            class="p-2 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-lg transition-colors flex-shrink-0">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer Area -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
-        <div class="max-w-4xl mx-auto px-4">
-            <p>© 2026 Health for California Insurance Center. All rights reserved.</p>
-            <p class="mt-1 text-slate-400">Health for California is a Covered California Storefront and Licensed Partner.</p>
-        </div>
-    </footer>
-
-    <!-- Toast Banner Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-navy-900 text-white px-4 py-3 rounded-xl shadow-2xl border border-white/20 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none flex items-center gap-3 z-50">
-        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-400"></i>
-        <div>
-            <div class="font-bold text-sm" id="toast-title">Link Copied!</div>
-            <div class="text-xs text-slate-300" id="toast-desc">Ready to paste into webinar chat</div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        lucide.createIcons();
-
-        function openLink(url) {
-            window.open(url, '_blank');
-        }
-
-        function copyLink(url, label) {
-            navigator.clipboard.writeText(url).then(() => {
-                showToast(label);
-            }).catch(err => {
-                console.error('Copy failed', err);
-            });
-        }
-
-        function showToast(label) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-title').textContent = label + ' Copied';
-            
-            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-            }, 3000);
-        }
-    </script>
-</body>
-</html>
+                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                            <i data-lucide="presentation" class="w-7 h-7"></i>
+                        </div>
+                        <button onclick="event.stopPropagation(); copyLink('http://hfca.cc/learn-medicare', 'Webinar Registration Link')" 
+                                title="Copy link for webinar chat"
+                                class="p-2.5 text-slate
