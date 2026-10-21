@@ -34,15 +34,14 @@
 
     <!-- Official Brand Header Area -->
     <header class="bg-navy-900 text-white border-b border-slate-200 shadow-md">
-        <div class="max-w-5xl mx-auto px-4 py-5 sm:px-6">
+        <div class="max-w-5xl mx-auto px-4 py-4 sm:px-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 
                 <!-- Dual Branding Group -->
                 <div class="flex items-center gap-4 sm:gap-6">
-                    <!-- Health for California SVG Logo -->
+                    <!-- Health for California Logo -->
                     <div class="flex items-center gap-2.5">
                         <div class="w-11 h-11 rounded-full border-2 border-white/90 flex items-center justify-center bg-navy-900 flex-shrink-0 p-1.5">
-                            <!-- California State Map -->
                             <svg viewBox="0 0 100 100" class="w-full h-full fill-white">
                                 <path d="M 35 15 L 68 15 L 62 38 L 78 62 L 68 85 L 50 85 L 35 68 L 30 42 Z" />
                             </svg>
@@ -56,22 +55,11 @@
                     <!-- Vertical White Divider -->
                     <div class="h-9 w-px bg-white/30"></div>
 
-                    <!-- Covered California SVG Logo (Fixed Dimensions) -->
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-11 h-11 flex items-center justify-center flex-shrink-0 p-1">
-                            <svg viewBox="0 0 120 100" class="w-full h-full fill-white">
-                                <path d="M 10,75 A 50,50 0 0,1 110,75 L 94,75 A 34,34 0 0,0 26,75 Z" opacity="0.9"/>
-                                <path d="M 28,75 A 32,32 0 0,1 92,75 L 78,75 A 18,18 0 0,0 42,75 Z" opacity="0.6"/>
-                                <circle cx="38" cy="62" r="4" />
-                                <circle cx="60" cy="54" r="5" />
-                                <circle cx="82" cy="62" r="4" />
-                                <path d="M 32,75 A 6,6 0 0,1 44,75 Z M 53,75 A 7,7 0 0,1 67,75 Z M 76,75 A 6,6 0 0,1 88,75 Z" />
-                            </svg>
-                        </div>
-                        <div class="text-white leading-tight">
-                            <div class="font-bold tracking-wider text-xs sm:text-sm uppercase">COVERED</div>
-                            <div class="font-bold tracking-wider text-xs sm:text-sm uppercase">CALIFORNIA</div>
-                        </div>
+                    <!-- Covered California Official PNG Image Logo -->
+                    <div class="flex items-center h-10">
+                        <img src="https://enrollca.com/wp-content/uploads/2021/04/Covered-California-Logo.png" 
+                             alt="Covered California Logo" 
+                             class="h-9 sm:h-10 w-auto object-contain brightness-0 invert" />
                     </div>
                 </div>
 
@@ -103,7 +91,7 @@
         <!-- Blocky 2-Column Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Featured Block (Full Width Across Grid) -->
+            <!-- Card 1: Schedule a 1-on-1 Appointment -->
             <div onclick="openLink('https://enrollment.healthforcalifornia.com/medicare/appointment')" 
                  class="md:col-span-2 group relative bg-white rounded-3xl p-7 border-2 border-amber-400 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden transform hover:-translate-y-1">
                 
@@ -118,7 +106,7 @@
                                 Featured Free Service
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-navy-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
-                                Schedule a 1-on-1 Appointment with Staff
+                                Schedule a 1-on-1 Appointment
                                 <i data-lucide="arrow-up-right" class="w-5 h-5 text-amber-600"></i>
                             </h3>
                             <p class="text-slate-600 text-sm sm:text-base mt-1 max-w-2xl">
@@ -135,7 +123,7 @@
                 </div>
             </div>
 
-            <!-- Block 2: SSA Sign Up -->
+            <!-- Card 2: Sign up for Medicare -->
             <div onclick="openLink('https://www.ssa.gov/medicare')" 
                  class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
@@ -143,14 +131,14 @@
                         <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
                             <i data-lucide="building-2" class="w-7 h-7"></i>
                         </div>
-                        <button onclick="event.stopPropagation(); copyLink('https://www.ssa.gov/medicare', 'SSA Medicare Link')" 
+                        <button onclick="event.stopPropagation(); copyLink('https://www.ssa.gov/medicare', 'Medicare Sign Up Link')" 
                                 title="Copy link for webinar chat"
                                 class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
                             <i data-lucide="copy" class="w-5 h-5"></i>
                         </button>
                     </div>
                     <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Sign Up on SSA.gov
+                        Sign up for Medicare
                         <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                     </h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -159,7 +147,7 @@
                 </div>
             </div>
 
-            <!-- Block 3: Medicare & You Handbook -->
+            <!-- Card 3: Medicare & You Handbook -->
             <div onclick="openLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf')" 
                  class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
@@ -183,22 +171,22 @@
                 </div>
             </div>
 
-            <!-- Block 4: Health for California Website -->
+            <!-- Card 4: Health For Ca Senior Health Insurance -->
             <div onclick="openLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance')" 
                  class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
                     <div class="flex items-center justify-between mb-5">
                         <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                            <i data-lucide="map-pin" class="w-7 h-7"></i>
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
                         </div>
-                        <button onclick="event.stopPropagation(); copyLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance', 'Health for California Website Link')" 
+                        <button onclick="event.stopPropagation(); copyLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance', 'Health For Ca Senior Health Insurance Link')" 
                                 title="Copy link for webinar chat"
                                 class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
                             <i data-lucide="copy" class="w-5 h-5"></i>
                         </button>
                     </div>
                     <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Senior Insurance Center
+                        Health For Ca Senior Health Insurance
                         <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                     </h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -207,7 +195,7 @@
                 </div>
             </div>
 
-            <!-- Block 5: Register for Another Webinar -->
+            <!-- Card 5: Medicare 101 Webinar Schedule -->
             <div onclick="openLink('http://hfca.cc/learn-medicare')" 
                  class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
                 <div>
@@ -215,6 +203,70 @@
                         <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
                             <i data-lucide="presentation" class="w-7 h-7"></i>
                         </div>
-                        <button onclick="event.stopPropagation(); copyLink('http://hfca.cc/learn-medicare', 'Webinar Registration Link')" 
+                        <button onclick="event.stopPropagation(); copyLink('http://hfca.cc/learn-medicare', 'Medicare 101 Webinar Schedule Link')" 
                                 title="Copy link for webinar chat"
-                                class="p-2.5 text-slate
+                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
+                        Medicare 101 Webinar Schedule
+                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Invite a friend or sign up for upcoming interactive Medicare educational workshops and live Q&A sessions.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
+        <div class="max-w-5xl mx-auto px-4">
+            <p>© 2026 Health for California Insurance Center. All rights reserved.</p>
+            <p class="mt-1 text-slate-400">Health for California is a Covered California Storefront and Licensed Partner.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-navy-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-white/20 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none flex items-center gap-3 z-50">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-400"></i>
+        <div>
+            <div class="font-bold text-sm" id="toast-title">Link Copied!</div>
+            <div class="text-xs text-slate-300">Ready to paste into webinar chat</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        function copyLink(url, label) {
+            navigator.clipboard.writeText(url).then(() => {
+                showToast(label);
+            }).catch(err => {
+                console.error('Copy failed', err);
+            });
+        }
+
+        function showToast(label) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').textContent = label + ' Copied';
+            
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
