@@ -6,8 +6,6 @@
     <title>Medicare 101 Webinar - Health for California</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -16,10 +14,6 @@
                         navy: {
                             800: '#153258',
                             900: '#0e3052',
-                        },
-                        gold: {
-                            400: '#facc15',
-                            500: '#eab308',
                         }
                     }
                 }
@@ -38,22 +32,21 @@
 
     <!-- Official Brand Header Area -->
     <header class="bg-navy-900 text-white border-b border-slate-200 shadow-md">
-        <div class="max-w-5xl mx-auto px-4 py-5 sm:px-6">
+        <div class="max-w-5xl mx-auto px-4 py-4 sm:px-6">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 
                 <!-- Dual Branding Group -->
                 <div class="flex items-center gap-4 sm:gap-6">
                     
-                    <!-- Health for California Logo (Exact CaliLogo.png Vector Tracing) -->
+                    <!-- Health for California Logo (Clean Single Golden Ring Seal) -->
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-amber-400 flex items-center justify-center p-1 bg-navy-900 flex-shrink-0 shadow-sm">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-navy-900 flex-shrink-0">
                             <svg viewBox="0 0 500 500" class="w-full h-full">
-                                <!-- Outer Ring Seal -->
-                                <circle cx="250" cy="250" r="235" fill="none" stroke="#facc15" stroke-width="12"/>
-                                <!-- High-Precision California Silhouette Path -->
+                                <!-- Single Outer Golden Ring Seal -->
+                                <circle cx="250" cy="250" r="235" fill="none" stroke="#facc15" stroke-width="14"/>
+                                <!-- California Silhouette & Channel Islands Path -->
                                 <g fill="#facc15">
                                     <path d="M 125,85 L 230,85 L 230,200 L 380,360 L 370,380 L 320,410 L 305,420 L 307,400 L 290,415 L 275,390 L 260,375 L 240,355 L 225,350 L 210,325 L 205,300 L 180,275 L 185,255 L 175,235 L 165,225 L 168,205 L 160,200 L 163,185 L 145,170 L 138,135 L 122,125 L 128,110 Z" />
-                                    <!-- Channel Islands Accents -->
                                     <ellipse cx="230" cy="370" rx="4" ry="2" />
                                     <ellipse cx="240" cy="368" rx="6" ry="3" />
                                     <ellipse cx="260" cy="385" rx="5" ry="3" />
@@ -71,7 +64,7 @@
                     <!-- Vertical White Divider -->
                     <div class="h-9 w-px bg-white/30"></div>
 
-                    <!-- Covered California Official PNG Image Logo -->
+                    <!-- Covered California Official Image Logo -->
                     <div class="flex items-center h-10">
                         <img src="https://enrollca.com/wp-content/uploads/2021/04/Covered-California-Logo.png" 
                              alt="Covered California Logo" 
@@ -114,7 +107,14 @@
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                     <div class="flex items-start sm:items-center gap-5">
                         <div class="p-4 bg-amber-500 text-white rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                            <i data-lucide="calendar-check-2" class="w-8 h-8"></i>
+                            <!-- Calendar Icon -->
+                            <svg class="w-8 h-8 stroke-current fill-none stroke-2" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <path d="M9 16l2 2 4-4"></path>
+                            </svg>
                         </div>
                         <div>
                             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 mb-2">
@@ -123,7 +123,7 @@
                             </div>
                             <h3 class="text-xl sm:text-2xl font-bold text-navy-900 group-hover:text-amber-700 transition-colors flex items-center gap-2">
                                 Schedule a 1-on-1 Appointment
-                                <i data-lucide="arrow-up-right" class="w-5 h-5 text-amber-600"></i>
+                                <svg class="w-5 h-5 text-amber-600 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                             </h3>
                             <p class="text-slate-600 text-sm sm:text-base mt-1 max-w-2xl">
                                 Book a personalized, confidential consultation with an authorized Health for California licensed Medicare specialist.
@@ -133,58 +133,4 @@
 
                     <button onclick="event.stopPropagation(); copyLink('https://enrollment.healthforcalifornia.com/medicare/appointment', '1-on-1 Appointment Link')" 
                             title="Copy link for webinar chat"
-                            class="p-3 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors self-end sm:self-center flex-shrink-0 bg-slate-50 border border-slate-200">
-                        <i data-lucide="copy" class="w-5 h-5"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 2: Sign up for Medicare -->
-            <div onclick="openLink('https://www.ssa.gov/medicare')" 
-                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-                <div>
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                            <i data-lucide="building-2" class="w-7 h-7"></i>
-                        </div>
-                        <button onclick="event.stopPropagation(); copyLink('https://www.ssa.gov/medicare', 'Medicare Sign Up Link')" 
-                                title="Copy link for webinar chat"
-                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
-                            <i data-lucide="copy" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Sign up for Medicare
-                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                    </h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Official Social Security Administration portal to apply for Medicare Part A and Part B online.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 3: Medicare & You Handbook -->
-            <div onclick="openLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf')" 
-                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-                <div>
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                            <i data-lucide="book-open-check" class="w-7 h-7"></i>
-                        </div>
-                        <button onclick="event.stopPropagation(); copyLink('https://www.medicare.gov/publications/10050-medicare-and-you.pdf', 'Medicare Handbook PDF Link')" 
-                                title="Copy link for webinar chat"
-                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
-                            <i data-lucide="copy" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Medicare & You Handbook
-                        <i data-lucide="file-text" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                    </h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Download the current year's official U.S. government Medicare reference manual and coverage guide (PDF).
-                    </p>
-                </div>
-            </div>
-
-            <!--
+                            class="p-3 text-slate-40
