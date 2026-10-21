@@ -16,6 +16,10 @@
                         navy: {
                             800: '#153258',
                             900: '#0e3052',
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
                         }
                     }
                 }
@@ -40,12 +44,22 @@
                 <!-- Dual Branding Group -->
                 <div class="flex items-center gap-4 sm:gap-6">
                     
-                    <!-- Health for California Logo with High-Precision California State Vector -->
+                    <!-- Health for California Logo (Exact CaliLogo.png Vector Tracing) -->
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-amber-400 flex items-center justify-center p-1.5 bg-navy-900 flex-shrink-0 shadow-sm">
-                            <svg viewBox="0 0 100 100" class="w-full h-full fill-amber-400">
-                                <!-- High-Accuracy California State Outline Vector Path -->
-                                <path d="M 28,18 L 68,18 L 68,36 L 56,58 L 86,82 L 72,85 L 65,81 L 58,84 L 50,81 L 44,77 L 36,69 L 41,60 L 36,53 L 30,47 L 35,39 L 29,28 Z" />
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-amber-400 flex items-center justify-center p-1 bg-navy-900 flex-shrink-0 shadow-sm">
+                            <svg viewBox="0 0 500 500" class="w-full h-full">
+                                <!-- Outer Ring Seal -->
+                                <circle cx="250" cy="250" r="235" fill="none" stroke="#facc15" stroke-width="12"/>
+                                <!-- High-Precision California Silhouette Path -->
+                                <g fill="#facc15">
+                                    <path d="M 125,85 L 230,85 L 230,200 L 380,360 L 370,380 L 320,410 L 305,420 L 307,400 L 290,415 L 275,390 L 260,375 L 240,355 L 225,350 L 210,325 L 205,300 L 180,275 L 185,255 L 175,235 L 165,225 L 168,205 L 160,200 L 163,185 L 145,170 L 138,135 L 122,125 L 128,110 Z" />
+                                    <!-- Channel Islands Accents -->
+                                    <ellipse cx="230" cy="370" rx="4" ry="2" />
+                                    <ellipse cx="240" cy="368" rx="6" ry="3" />
+                                    <ellipse cx="260" cy="385" rx="5" ry="3" />
+                                    <circle cx="242" cy="392" r="2" />
+                                    <circle cx="268" cy="405" r="2" />
+                                </g>
                             </svg>
                         </div>
                         <div class="text-white leading-tight">
@@ -173,102 +187,4 @@
                 </div>
             </div>
 
-            <!-- Card 4: Health For Ca Senior Health Insurance -->
-            <div onclick="openLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance')" 
-                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-                <div>
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                            <i data-lucide="shield-check" class="w-7 h-7"></i>
-                        </div>
-                        <button onclick="event.stopPropagation(); copyLink('https://www.healthforcalifornia.com/medicare/senior-health-insurance', 'Health For Ca Senior Health Insurance Link')" 
-                                title="Copy link for webinar chat"
-                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
-                            <i data-lucide="copy" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Health For Ca Senior Health Insurance
-                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                    </h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Explore state-specific Covered California Medicare Advantage, Supplement (Medigap), and Part D plans.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 5: Medicare 101 Webinar Schedule -->
-            <div onclick="openLink('http://hfca.cc/learn-medicare')" 
-                 class="group bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-navy-900/30 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-                <div>
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="p-4 bg-slate-100 text-navy-900 rounded-2xl group-hover:bg-navy-900 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                            <i data-lucide="presentation" class="w-7 h-7"></i>
-                        </div>
-                        <button onclick="event.stopPropagation(); copyLink('http://hfca.cc/learn-medicare', 'Medicare 101 Webinar Schedule Link')" 
-                                title="Copy link for webinar chat"
-                                class="p-2.5 text-slate-400 hover:text-navy-900 hover:bg-slate-100 rounded-xl transition-colors">
-                            <i data-lucide="copy" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-                    <h3 class="text-xl font-bold text-navy-900 group-hover:text-blue-700 transition-colors mb-2 flex items-center justify-between">
-                        Medicare 101 Webinar Schedule
-                        <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-                    </h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Invite a friend or sign up for upcoming interactive Medicare educational workshops and live Q&A sessions.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer Area -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
-        <div class="max-w-5xl mx-auto px-4">
-            <p>© 2026 Health for California Insurance Center. All rights reserved.</p>
-            <p class="mt-1 text-slate-400">Health for California is a Covered California Storefront and Licensed Partner.</p>
-        </div>
-    </footer>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-navy-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-white/20 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none flex items-center gap-3 z-50">
-        <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-400"></i>
-        <div>
-            <div class="font-bold text-sm" id="toast-title">Link Copied!</div>
-            <div class="text-xs text-slate-300">Ready to paste into webinar chat</div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        lucide.createIcons();
-
-        function openLink(url) {
-            window.open(url, '_blank');
-        }
-
-        function copyLink(url, label) {
-            navigator.clipboard.writeText(url).then(() => {
-                showToast(label);
-            }).catch(err => {
-                console.error('Copy failed', err);
-            });
-        }
-
-        function showToast(label) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-title').textContent = label + ' Copied';
-            
-            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-            }, 3000);
-        }
-    </script>
-</body>
-</html>
+            <!--
